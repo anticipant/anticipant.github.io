@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e1e1e1;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Mail_copy" data-name="Mail copy" class="cls-1" d="M896,5134v1a1,1,0,0,1-1,1H881a1,1,0,0,1-1-1v-3c0-.02.011-0.04,0.012-0.06L880,5127l8,6,8-6,0.012,7H896Zm-15.988-9a1.02,1.02,0,0,1,1-1h14a1.018,1.018,0,0,1,1,1l-8,6Z" transform="translate(-880 -5124)"/>
+</svg>
