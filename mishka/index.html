@@ -216,13 +216,16 @@
         </form>
       </div>
     </div>
-
     <script>
       var navMain = document.querySelector(".main-nav");
       var navItems = document.querySelectorAll(".main-nav__items");
       var navToggle = document.querySelector(".main-nav__toggle");
       var headerContainer = document.querySelector(".page-header__container");
 
+      var link = document.querySelector(".special-product-card__buy");
+      var popup = document.querySelector(".card-purchase");
+
+      //MAIN MENU
       for (var i = 0; i<navItems.length; ++i) {
         navItems[i].classList.remove("main-nav__items--no-js");
         navItems[i].classList.remove("main-nav__items--open");
@@ -249,6 +252,22 @@
           navMain.classList.add("main-nav--open");
           navToggle.classList.add("main-nav__toggle--open");
           headerContainer.classList.add("page-header__container--open");
+        }
+      });
+
+      //POPUP
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("card-purchase--hidden");
+      });
+
+      popup.addEventListener("click", function(event) {
+        event.preventDefault();
+        event = event || window.event
+        var t = event.target || event.srcElement;
+        if (t==popup) {
+          //          console.log("close popup") 
+          popup.classList.add("card-purchase--hidden");
         }
       });
     </script>

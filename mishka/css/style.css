@@ -579,7 +579,8 @@ body {
       align-items: center;
   background-color: rgba(255, 255, 255, 0.9); }
   .card-purchase--hidden {
-    display: none; }
+    display: none; 
+}
 
 .card-purchase__container {
   width: 320px;
