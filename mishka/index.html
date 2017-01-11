@@ -262,14 +262,19 @@
       });
 
       popup.addEventListener("click", function(event) {
-        event.preventDefault();
-        event = event || window.event
+
+        event = event || window.event;
         var t = event.target || event.srcElement;
         if (t==popup) {
-          //          console.log("close popup") 
+          event.preventDefault();
           popup.classList.add("card-purchase--hidden");
         }
       });
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          popup.classList.add("card-purchase--hidden");
+        }
+      })
     </script>
   </body>
 </html>

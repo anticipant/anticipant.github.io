@@ -197,6 +197,10 @@
       var navToggle = document.querySelector(".main-nav__toggle");
       var headerContainer = document.querySelector(".page-header__container");
 
+      var link = document.querySelector(".special-product-card__buy");
+      var popup = document.querySelector(".card-purchase");
+
+      //MAIN MENU
       for (var i = 0; i<navItems.length; ++i) {
         navItems[i].classList.remove("main-nav__items--no-js");
         navItems[i].classList.remove("main-nav__items--open");
@@ -225,6 +229,27 @@
           headerContainer.classList.add("page-header__container--open");
         }
       });
+
+      //POPUP
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("card-purchase--hidden");
+      });
+
+      popup.addEventListener("click", function(event) {
+
+        event = event || window.event;
+        var t = event.target || event.srcElement;
+        if (t==popup) {
+          event.preventDefault();
+          popup.classList.add("card-purchase--hidden");
+        }
+      });
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          popup.classList.add("card-purchase--hidden");
+        }
+      })
     </script>
   </body>
 </html>
