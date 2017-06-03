@@ -236,6 +236,9 @@ color: #fff;
   width: 100%;
   text-align: center;
 }
+.product .title img {
+  margin: 0 auto;
+}
 .product .title p {
   margin: 0 0 30px;
   font-size: 14px;
