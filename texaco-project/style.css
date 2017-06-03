@@ -1,0 +1,447 @@
+* {
+  box-sizing: border-box;
+}
+.slick-init,
+.slick-slide-item {
+  width: 1050px;
+}
+.slick-init {
+  position: relative;
+}
+.slick-arrow {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  z-index: 1;
+  width: 19px;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+  background-color: red;
+  background: url(/image/arrow.png);  
+  font-size: 0;
+  cursor: pointer;
+}
+.slick-init .slick-prev {
+  right: initial;
+  left: 25px;
+  transform: rotate(180deg);
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+.main-wrapper {
+  width: 100%;
+  min-width: 1340px;
+  background: url('/image/bg.jpg') repeat;
+  background-size: contain;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 150px 0 66px 130px;
+  background-color: rgba(22, 22, 22, 0.96); 
+
+}
+.header_content-block {
+  display: flex;
+  flex-direction: column;
+
+  width: 600px;
+}
+.header_content-block h1 {
+  margin: 0;
+  font-size: 100px;
+  color: #ee2528;
+  text-transform: uppercase;
+}
+.header_content-block p {
+  margin: 45px 0 0;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 38px;
+  color: #d1d1d1;
+}
+.header_content-block:last-of-type {
+  width: 360px;
+  margin-left: 90px;
+}
+.header_content-block:last-of-type img {
+  margin-top: -38px;
+  margin-left: 16px;
+
+}
+.header_content-block .advantages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 74px 0 0;
+}
+.header_content-block .advantages > div {
+  width: 270px;
+  padding: 5px 28px 5px 56px;
+  margin-bottom: 63px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+  color: #d1d1d1;
+}
+.header_content-block .advantages > div:first-of-type {
+  background: url('image/icon1.png') no-repeat 0 4px;
+}
+.header_content-block .advantages > div:nth-of-type(2) {
+  background: url('image/icon2.png') no-repeat 1px 7px;
+}
+.header_content-block .advantages > div:nth-of-type(3) {
+  background: url('image/icon3.png') no-repeat 0 9px;
+}
+.header_content-block .advantages > div:last-of-type {
+  background: url('image/icon4.png') no-repeat 0 7px;
+}
+
+/*about section*/ 
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 150px 0 100px 130px;
+  background: #fff;
+}
+.about + section {
+  padding: 0 0 0 130px;
+}
+.about .title {
+  width: 100%;
+  text-align: center;
+}
+.about .title p {
+  margin: 0 0 30px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ee2528;
+}
+.about .title h2 {
+  font-size: 90px;
+  line-height: 120px;
+  color: #231f20;
+}
+.about_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 75px 0 0;
+}
+.about_row-1 .about_column-1,
+.about_row-1 .about_column-2 {
+  display: flex;
+  flex-direction: column;
+}
+.about_column-1 {
+  width: 600px;
+}
+.about_column-2 {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 180px;
+}
+.about_row-1 p {
+  margin: 0;
+  font-size: 21px;
+  line-height: 33px;
+  font-weight: 300;
+  color: #231f20;
+}
+.about_row-1 p + p {
+  margin: 40px 0 0;
+  font-size: 17px;
+  line-height: 28px;
+}
+.about_column-2 p {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #231f20;
+}
+.about .advantages {
+  width: 210px;
+  margin: 0 150px 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #231f20;
+}
+/*
+.advantages p:first-of-type {
+font-size: 71px;
+line-height: 103px;
+}
+*/
+.about .advantages-3 {
+  margin: 0;
+}
+.wrapper-red {
+  width: 100%;
+  background-color: rgba(221, 16, 16, 0.90); 
+}
+.about-part2 {
+  position: relative;
+  width: 1050px;
+  padding: 60px 0 100px;
+  margin: 0 auto;
+}
+.about-part2 img.auto  {
+  position: absolute;
+  right: 0;
+  top: -40px;
+}
+/*
+.about_footer h2 {
+font-size: 47px;
+line-height: 88px;
+color: #fff;
+}
+*/
+.about-part2 p {
+  width: 540px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #fff;
+}
+
+
+/*PRODUCT SECTION*/
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px 0 70px 130px;
+  background: #1d1d1d;
+
+
+}
+.product .title {
+  width: 100%;
+  text-align: center;
+}
+.product .title p {
+  margin: 0 0 30px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ee2528;
+}
+.product .title h2 {
+  font-size: 90px;
+  line-height: 120px;
+  color: #fff;
+} 
+.product-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1050px;
+  margin: 70px auto 0;
+  background-color: #fff;
+}
+.product-image {
+  padding:  90px 60px 60px 150px;
+}
+.product-image .description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 30px 0 0;
+  font-size: 11px;
+  line-height: 29px;
+  font-weight: 300;
+  color: #a8a8a8;
+}
+.litres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 17px;
+  margin: 0 4px;
+  font-size: 11px;
+  color: #a5a5a5;
+  border: 1px solid #a5a5a5;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.litres.active {
+  color: #fff;
+  border: 1px solid #ee2528;
+  background-color: #ee2528;
+}
+.product-info {
+  width: 540px;
+  padding: 70px 60px 90px 30px;
+  color: #1d1d1d;
+}
+.product-info > p {
+  margin: 40px 0 50px;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 300;
+  color: #1d1d1d;
+}
+.product-info p span {
+  font-weight: 700;
+}
+.product-info .advantages {
+
+}
+.product-info h4 {
+  margin: 0 0 10px;
+}
+.product-info .advantages > div {
+  position: relative;
+  padding: 0 0 0 20px;
+}
+.product-info .advantages > div:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: #ee2528;
+}
+.product-info .advantages p {
+  margin: 0 0 20px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+}
+.product-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.product-footer p {
+  font-weight: 300;
+  font-size: 13x;
+  line-height: 18px;
+  color: #414042;
+}
+.product-footer .left h4 {
+  margin: 0;
+  text-transform: uppercase;
+  color: #ee2528;
+}
+.product-footer .right h4 {
+  text-transform: uppercase;
+  color: #414042;
+}
+.product-footer .left {
+  width: 50%;
+  padding: 40px 0 45px 35px;
+}
+.product-footer .right {
+  width: 50%;
+  padding: 40px 0 45px 35px;
+  background-color: #e8e8e8;
+}
+.product-footer .right span {
+  font-weight: 700;
+}
+/* FIX menu */
+nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 130px;
+  background-color: #0a0a0a;
+}
+.menu-logo {
+  position:relative;
+  height: 125px;
+  margin: 0 0 90px;
+  overflow: hidden;
+  text-align: center;
+}
+.menu-logo img {
+  position: relative;
+  z-index: 1;
+  margin: 28px 0 0;
+}
+.menu-logo > div {
+  background-color: #fff;
+  height: 80%;
+}
+.menu-logo:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  display: block;
+  width: 71.6px;
+  height: 29px;
+  background-color: #fff;
+  transform: rotate(19deg);
+}
+.menu-logo:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  display: block;
+  width: 71.6px;
+  height: 29px;
+  background-color: #fff;
+  transform: rotate(-19deg);
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+nav li {
+  position: relative;
+  margin: 0 0 37px;
+}
+nav li a {
+  font-size: 13px;
+  line-height: 16px;
+  color: #858585;
+  text-decoration: none;
+}
+nav li.active a {
+  color: #ee2528;
+}
+nav li.star a:before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  background: url('image/star.png') no-repeat;
+}
+nav li.active:after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #ee2528;
+}
+
+/* FIRST content block */
