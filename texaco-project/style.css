@@ -18,7 +18,7 @@
   border: none;
   background-color: transparent;
   background-color: red;
-  background: url(/image/arrow.png);  
+  background: url(image/arrow.png);  
   font-size: 0;
   cursor: pointer;
 }
@@ -34,7 +34,7 @@ body {
 .main-wrapper {
   width: 100%;
   min-width: 1340px;
-  background: url('/image/bg.jpg') repeat;
+  background: url('image/bg.jpg') repeat;
   background-size: contain;
 }
 .header {
