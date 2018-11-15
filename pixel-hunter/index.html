@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Пиксель хантер</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<main class="central">
+
+</main>
+
+<template id="modal-error">
+  <section class="modal-error modal-error__wrap">
+    <div class="modal-error__inner">
+      <h2 class="modal-error__title">Произошла ошибка!</h2>
+      <p class="modal-error__text">Статус: 404. Пожалуйста, перезагрузите страницу.</p>
+    </div>
+  </section>
+</template>
+
+<template id="modal-confirm">
+  <section class="modal-confirm modal-confirm__wrap">
+    <form class="modal-confirm__inner">
+      <button class="modal-confirm__close" type="button">Закрыть</button>
+      <h2 class="modal-confirm__title">Подтверждение</h2>
+      <p class="modal-confirm__text">Вы уверены что хотите начать игру заново?</p>
+      <div class="modal-confirm__btn-wrap">
+        <button class="modal-confirm__btn">Ок</button>
+        <button class="modal-confirm__btn">Отмена</button>
+      </div>
+    </form>
+  </section>
+</template>
+
+</body>
+</html>
+<script src="js/main.js"></script>
