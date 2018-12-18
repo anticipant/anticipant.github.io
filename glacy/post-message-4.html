@@ -37,7 +37,7 @@
                 case `getItem`:
                     localStorage.getItem(data.title);
 
-                    str = `${window.parent}!!!!  Значение "${data.title}" из localStorage равно "${localStorage.getItem(data.title)}"`;
+                    str = `Значение "${data.title}" из localStorage равно "${localStorage.getItem(data.title)}"`;
 
                     window.parent.postMessage(`hi codepen`, `https://s.codepen.io`);
                     break;
