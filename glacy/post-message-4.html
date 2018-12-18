@@ -28,22 +28,23 @@
         let str = `Пришли неверные данные`;
 
         if (data.title && data.value && data.method) {
-            // Storage.getItem();
-            // Storage.setItem();
-            // Storage.removeItem();
+
             switch(data.method) {
                 case `setItem`:
                     localStorage.setItem(data.title, data.value);
+                    str = `Значение "${data.title}" записано в localStorage и равно "${localStorage.getItem(data.title)}"`;
                     break;
                 case `getItem`:
                     localStorage.getItem(data.title);
+                    str = `Значение "${data.title}" из localStorage равно "${localStorage.getItem(data.title)}"`;
                     break;
                 case `removeItem`:
                     localStorage.removeItem(data.title);
+                    str = `Значение ${data.title} Removed!!! из localStorage. "${localStorage.getItem(data.title)}"`;
                     break;
 
             }
-            str = `Значение ${data.title} из localStorage: ${localStorage.getItem(data.title)}`;
+            // str = `Значение ${data.title} из localStorage: ${localStorage.getItem(data.title)}`;
             // str = `Сообщение: ${data.title}. Значение объекта: ${data.value}. --- ${origin}`;
         }
 
