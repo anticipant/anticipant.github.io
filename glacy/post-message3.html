@@ -17,14 +17,6 @@
         const data = evt.data;
         const origin = evt.origin;
 
-        /**
-         * Проверка октуда пришел запрос
-         */
-        if (origin !== "https://codepen.io") {
-            alert(`Запрос пришел с другого домена`);
-            return;
-        }
-
         let str = `Пришли неверные данные`;
 
         if (data.title && data.value) {
