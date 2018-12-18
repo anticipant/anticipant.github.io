@@ -14,13 +14,14 @@
 </div>
 <script>
     const onMessage = (evt) => {
+        const codepen = `https://s.codepen.io`;
         const data = evt.data;
         const origin = evt.origin;
 
         /**
          * Проверка октуда пришел запрос
          */
-        if (origin !== "https://s.codepen.io") {
+        if (origin !== codepen) {
             alert(`Запрос пришел с другого домена`);
             return;
         }
@@ -33,19 +34,17 @@
                 case `setItem`:
                     localStorage.setItem(data.title, data.value);
                     str = `Значение "${data.title}" <b style="color: green;">записано</b> в localStorage и равно "${localStorage.getItem(data.title)}"`;
-                    window.parent.postMessage(`Written!!!`, `https://s.codepen.io`);
+                    window.parent.postMessage(`Written!!!`, codepen);
                     break;
                 case `getItem`:
                     localStorage.getItem(data.title);
-
                     str = `Значение "${data.title}" из localStorage равно "${localStorage.getItem(data.title)}"`;
-
-                    window.parent.postMessage(localStorage.getItem(data.title), `https://s.codepen.io`);
+                    window.parent.postMessage(localStorage.getItem(data.title), codepen);
                     break;
                 case `removeItem`:
                     localStorage.removeItem(data.title);
                     str = `Значение ${data.title} <b style="color: red;">удалено</b> из localStorage. "${localStorage.getItem(data.title)}"`;
-                    window.parent.postMessage(`Removed!!!`, `https://s.codepen.io`);
+                    window.parent.postMessage(`Removed!!!`, codepen);
                     break;
 
             }
