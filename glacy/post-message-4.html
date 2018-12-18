@@ -36,7 +36,10 @@
                     break;
                 case `getItem`:
                     localStorage.getItem(data.title);
-                    str = `Значение "${data.title}" из localStorage равно "${localStorage.getItem(data.title)}"`;
+
+                    str = `${window.parent}!!!!  Значение "${data.title}" из localStorage равно "${localStorage.getItem(data.title)}"`;
+
+                    window.parent.postMessage(`hi codepen`, `https://s.codepen.io`);
                     break;
                 case `removeItem`:
                     localStorage.removeItem(data.title);
@@ -44,8 +47,6 @@
                     break;
 
             }
-            // str = `Значение ${data.title} из localStorage: ${localStorage.getItem(data.title)}`;
-            // str = `Сообщение: ${data.title}. Значение объекта: ${data.value}. --- ${origin}`;
         }
 
         document.getElementById(`message`).innerHTML = str;
