@@ -32,18 +32,20 @@
             switch(data.method) {
                 case `setItem`:
                     localStorage.setItem(data.title, data.value);
-                    str = `Значение "${data.title}" записано в localStorage и равно "${localStorage.getItem(data.title)}"`;
+                    str = `Значение "${data.title}" <b style="color: green;>записано</b> в localStorage и равно "${localStorage.getItem(data.title)}"`;
+                    window.parent.postMessage(`Written!!!`, `https://s.codepen.io`);
                     break;
                 case `getItem`:
                     localStorage.getItem(data.title);
 
                     str = `Значение "${data.title}" из localStorage равно "${localStorage.getItem(data.title)}"`;
 
-                    window.parent.postMessage(`hi codepen`, `https://s.codepen.io`);
+                    window.parent.postMessage(localStorage.getItem(data.title), `https://s.codepen.io`);
                     break;
                 case `removeItem`:
                     localStorage.removeItem(data.title);
-                    str = `Значение ${data.title} Removed!!! из localStorage. "${localStorage.getItem(data.title)}"`;
+                    str = `Значение ${data.title} <b style="color: red;">удалено</b> из localStorage. "${localStorage.getItem(data.title)}"`;
+                    window.parent.postMessage(`Removed!!!`, `https://s.codepen.io`);
                     break;
 
             }
