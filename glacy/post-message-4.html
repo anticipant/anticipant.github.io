@@ -32,7 +32,7 @@
             switch(data.method) {
                 case `setItem`:
                     localStorage.setItem(data.title, data.value);
-                    str = `Значение "${data.title}" <b style="color: green;>записано</b> в localStorage и равно "${localStorage.getItem(data.title)}"`;
+                    str = `Значение "${data.title}" <b style="color: green;">записано</b> в localStorage и равно "${localStorage.getItem(data.title)}"`;
                     window.parent.postMessage(`Written!!!`, `https://s.codepen.io`);
                     break;
                 case `getItem`:
